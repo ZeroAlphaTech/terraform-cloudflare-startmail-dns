@@ -9,9 +9,10 @@ Terraform module that will create the necessary DNS entries in an existing [Clou
 
 ## Variables
 
-| Name                | Description                                                                                                              |
-|---------------------|--------------------------------------------------------------------------------------------------------------------------|
-| cloudflare_zone_id  | Zone ID on CloudFlare for domain                                                                                         |
-| domain_name         | Domain name to configure                                                                                                 |
-| verification_string | The string provided by SimpleLogin when setting up a custom domain (usually in the format `startmail-verification=-...`) |
-| enable_spf          | Whether to add SimpleLogin-specific DNS record for SPF support                                                           |
+| Name                | Description                                                                                                                              |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| cloudflare_zone_id  | Zone ID on CloudFlare for domain                                                                                                         |
+| domain_name         | Domain name to configure                                                                                                                 |
+| verification_string | The string provided by SimpleLogin when setting up a custom domain (usually in the format `startmail-verification=-...`)                 |
+| include_mx_records  | Whether to include MX records - use if you do not wish to cause conflict with existing mailserver records while signing up for StartMail |
+| enable_spf          | Whether to add SimpleLogin-specific DNS record for SPF support                                                                           |

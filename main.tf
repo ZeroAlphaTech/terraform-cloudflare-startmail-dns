@@ -1,6 +1,6 @@
 resource "cloudflare_record" "txt_verification" {
   name    = var.domain_name
-  value   = var.simplelogin_verification_string
+  value   = var.verification_string
   type    = "TXT"
   zone_id = var.cloudflare_zone_id
 }
